@@ -9,7 +9,6 @@ public class QuicktimeEvent : MonoBehaviour
     public RectTransform maxForce; // Reference to the safe zone RectTransform
     public float moveSpeed = 100f; // Speed of the pointer movement
 
-    private float direction = 1f; // 1 for moving towards B, -1 for moving towards A
     private RectTransform pointerTransform;
     private Vector3 targetPosition;
 
@@ -28,12 +27,10 @@ public class QuicktimeEvent : MonoBehaviour
         if (Vector3.Distance(pointerTransform.position, pointA.position) < 0.1f)
         {
             targetPosition = pointB.position;
-            direction = 1f;
         }
         else if (Vector3.Distance(pointerTransform.position, pointB.position) < 0.1f)
         {
             targetPosition = pointA.position;
-            direction = -1f;
         }
 
         // Check for input
