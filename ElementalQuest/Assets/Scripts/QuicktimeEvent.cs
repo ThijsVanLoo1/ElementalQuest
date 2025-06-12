@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System.Collections;
 
 public class QuicktimeEvent : MonoBehaviour
 {
@@ -8,6 +11,10 @@ public class QuicktimeEvent : MonoBehaviour
     public RectTransform normalForce; // Yellow zone
     public RectTransform maxForce; // Green zone
     public float moveSpeed; // Speed of the pointer movement
+    private bool canInput = true;
+    private float inputCooldown = 0.7f;
+    public Image cooldownFillImage;
+    public TMP_Text mass;
 
     private RectTransform pointerTransform;
     private Vector3 targetPosition;
@@ -24,7 +31,7 @@ public class QuicktimeEvent : MonoBehaviour
     private void OnEnable()
     {
         oreMass = ore.GetComponent<Ore>().oreMass;
-        Debug.Log(oreMass);
+        mass.text = "Atoommassa: " + oreMass.ToString();
     }
 
     void Update()
@@ -43,9 +50,10 @@ public class QuicktimeEvent : MonoBehaviour
         }
 
         // Check for input
-        if (Input.GetButtonDown("MineOre") || Input.GetKeyDown(KeyCode.Mouse0))
+        if (canInput && (Input.GetButtonDown("MineOre") || Input.GetKeyDown(KeyCode.Mouse0)))
         {
             CheckSuccess();
+            StartCoroutine(InputCooldownCoroutine());
         }
     }
 
@@ -56,23 +64,20 @@ public class QuicktimeEvent : MonoBehaviour
             // Check if the pointer is within the safe zone
             if (RectTransformUtility.RectangleContainsScreenPoint(maxForce, pointerTransform.position, null))
             {
-                Debug.Log("Sterke slag!");
                 oreMass -= 3;
-                Debug.Log(oreMass);
+                mass.text = "Atoommassa: " + oreMass.ToString();
                 if (oreMass <= 0) CheckComplete();
             }
             else if (RectTransformUtility.RectangleContainsScreenPoint(normalForce, pointerTransform.position, null))
             {
-                Debug.Log("Medium slag!!");
                 oreMass -= 2;
-                Debug.Log(oreMass);
+                mass.text = "Atoommassa: " + oreMass.ToString();
                 if (oreMass <= 0) CheckComplete();
             }
             else if (RectTransformUtility.RectangleContainsScreenPoint(minForce, pointerTransform.position, null))
             {
                 oreMass -= 1;
-                Debug.Log("Zwakke slag!!");
-                Debug.Log(oreMass);
+                mass.text = "Atoommassa: " + oreMass.ToString();
                 if (oreMass <= 0) CheckComplete();
             }
         }
@@ -80,7 +85,14 @@ public class QuicktimeEvent : MonoBehaviour
 
     void CheckComplete()
     {
-            Destroy(ore);
-            gameObject.transform.parent.gameObject.SetActive(false);
+        Destroy(ore);
+        gameObject.transform.parent.gameObject.SetActive(false);
+    }
+
+    IEnumerator InputCooldownCoroutine()
+    {
+        canInput = false;
+        yield return new WaitForSeconds(inputCooldown);
+        canInput = true;
     }
 }
