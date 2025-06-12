@@ -34,7 +34,7 @@ public class QuicktimeEvent : MonoBehaviour
         }
 
         // Check for input
-        if (Input.GetKeyDown(KeyCode.Space)) //KeyCode.JoystickButton5 for controller --> R2 button?
+        if (Input.GetButtonDown("MineOre")) //KeyCode.JoystickButton5 for controller --> R2 button?
         {
             CheckSuccess();
         }

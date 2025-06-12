@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (oreInRange && Input.GetKeyDown(KeyCode.E)) //Change for controller input
+        if (oreInRange && Input.GetButtonDown("MineOre")) //Change for controller input
         {
             startQuickTime();
         }
