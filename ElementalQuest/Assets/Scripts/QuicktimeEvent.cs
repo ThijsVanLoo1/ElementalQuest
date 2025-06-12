@@ -4,9 +4,9 @@ public class QuicktimeEvent : MonoBehaviour
 {
     public Transform pointA; // Reference to the starting point
     public Transform pointB; // Reference to the ending point
-    public RectTransform minForce; // Reference to the safe zone RectTransform
-    public RectTransform normalForce; // Reference to the safe zone RectTransform
-    public RectTransform maxForce; // Reference to the safe zone RectTransform
+    public RectTransform minForce; // Red zone
+    public RectTransform normalForce; // Yellow zone
+    public RectTransform maxForce; // Green zone
     public float moveSpeed = 100f; // Speed of the pointer movement
 
     private RectTransform pointerTransform;
@@ -41,11 +41,12 @@ public class QuicktimeEvent : MonoBehaviour
     }
 
     void CheckSuccess()
-    {
+    { 
         // Check if the pointer is within the safe zone
         if (RectTransformUtility.RectangleContainsScreenPoint(maxForce, pointerTransform.position, null))
         {
             Debug.Log("Sterke slag!");
+
         }
         else if (RectTransformUtility.RectangleContainsScreenPoint(normalForce, pointerTransform.position, null))
         {
