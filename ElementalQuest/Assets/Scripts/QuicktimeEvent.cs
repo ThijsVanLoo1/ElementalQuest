@@ -7,15 +7,24 @@ public class QuicktimeEvent : MonoBehaviour
     public RectTransform minForce; // Red zone
     public RectTransform normalForce; // Yellow zone
     public RectTransform maxForce; // Green zone
-    public float moveSpeed = 100f; // Speed of the pointer movement
+    public float moveSpeed; // Speed of the pointer movement
 
     private RectTransform pointerTransform;
     private Vector3 targetPosition;
+
+    public static GameObject ore;
+    private float oreMass;
 
     void Start()
     {
         pointerTransform = GetComponent<RectTransform>();
         targetPosition = pointB.position;
+    }
+
+    private void OnEnable()
+    {
+        oreMass = ore.GetComponent<Ore>().oreMass;
+        Debug.Log(oreMass);
     }
 
     void Update()
@@ -34,27 +43,44 @@ public class QuicktimeEvent : MonoBehaviour
         }
 
         // Check for input
-        if (Input.GetButtonDown("MineOre")) //KeyCode.JoystickButton5 for controller --> R2 button?
+        if (Input.GetButtonDown("MineOre") || Input.GetKeyDown(KeyCode.Mouse0))
         {
             CheckSuccess();
         }
     }
 
     void CheckSuccess()
-    { 
-        // Check if the pointer is within the safe zone
-        if (RectTransformUtility.RectangleContainsScreenPoint(maxForce, pointerTransform.position, null))
+    {
+        if (oreMass > 0)
         {
-            Debug.Log("Sterke slag!");
+            // Check if the pointer is within the safe zone
+            if (RectTransformUtility.RectangleContainsScreenPoint(maxForce, pointerTransform.position, null))
+            {
+                Debug.Log("Sterke slag!");
+                oreMass -= 3;
+                Debug.Log(oreMass);
+                if (oreMass <= 0) CheckComplete();
+            }
+            else if (RectTransformUtility.RectangleContainsScreenPoint(normalForce, pointerTransform.position, null))
+            {
+                Debug.Log("Medium slag!!");
+                oreMass -= 2;
+                Debug.Log(oreMass);
+                if (oreMass <= 0) CheckComplete();
+            }
+            else if (RectTransformUtility.RectangleContainsScreenPoint(minForce, pointerTransform.position, null))
+            {
+                oreMass -= 1;
+                Debug.Log("Zwakke slag!!");
+                Debug.Log(oreMass);
+                if (oreMass <= 0) CheckComplete();
+            }
+        }
+    }
 
-        }
-        else if (RectTransformUtility.RectangleContainsScreenPoint(normalForce, pointerTransform.position, null))
-        {
-            Debug.Log("Medium slag!!");
-        }
-        else if (RectTransformUtility.RectangleContainsScreenPoint(minForce, pointerTransform.position, null))
-        {
-            Debug.Log("Zwakke slag!!");
-        }
+    void CheckComplete()
+    {
+            Destroy(ore);
+            gameObject.transform.parent.gameObject.SetActive(false);
     }
 }

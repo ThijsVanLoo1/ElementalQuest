@@ -8,14 +8,14 @@ public class Player : MonoBehaviour
 
     Vector2 movement;
     private bool oreInRange = false;
-
+    private GameObject ore;
 
     private void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (oreInRange && Input.GetButtonDown("MineOre")) //Change for controller input
+        if (!canvas.activeSelf && oreInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
         {
             startQuickTime();
         }
@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Ore"))
         {
             oreInRange = true;
+            ore = other.gameObject;
         }
     }
 
@@ -44,6 +45,7 @@ public class Player : MonoBehaviour
 
     private void startQuickTime()
     {
+        QuicktimeEvent.ore = ore;
         canvas.SetActive(true);
     }
 }

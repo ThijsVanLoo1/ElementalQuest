@@ -351,7 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: oreMass
-      value: 20
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5354482641955334901, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: m_LocalPosition.x
@@ -566,9 +566,7 @@ MonoBehaviour:
   minForce: {fileID: 45052541}
   normalForce: {fileID: 894822855}
   maxForce: {fileID: 1813476889}
-  moveSpeed: 250
-  ore: {fileID: 0}
-  canvas: {fileID: 225205737}
+  moveSpeed: 350
 --- !u!1 &894822854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,6 +1889,10 @@ PrefabInstance:
     - target: {fileID: 4630319952403274, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: m_Name
       value: H2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: oreMass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5354482641955334901, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: m_LocalPosition.x
