@@ -239,7 +239,7 @@ MonoBehaviour:
   minForce: {fileID: 1824481871769443852}
   normalForce: {fileID: 8185664897252907775}
   maxForce: {fileID: 4156243716932430998}
-  moveSpeed: 400
+  moveSpeed: 450
   mass: {fileID: 1514046572192729804}
   cooldownFill: {fileID: 6794632330943165519}
 --- !u!1 &4971152323706838562

@@ -36,7 +36,7 @@ public class QuicktimeEvent : MonoBehaviour
     void Update()
     {
         // Move the pointer towards the target position
-        pointerTransform.position = Vector3.MoveTowards(pointerTransform.position, targetPosition, moveSpeed * Time.deltaTime);
+        pointerTransform.position = Vector3.MoveTowards(pointerTransform.position, targetPosition, moveSpeed * Time.deltaTime * Screen.width / 840);
 
         // Change direction if the pointer reaches one of the points
         if (Vector3.Distance(pointerTransform.position, pointA.position) < 0.1f)
