@@ -1225,6 +1225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuickTimeUI
       objectReference: {fileID: 0}
+    - target: {fileID: 6733980431768093869, guid: fb9438d183e5ff84fab821291e5a141f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

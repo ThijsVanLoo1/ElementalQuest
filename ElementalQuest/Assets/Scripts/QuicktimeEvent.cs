@@ -14,6 +14,7 @@ public class QuicktimeEvent : MonoBehaviour
     private float inputCooldown = 0.7f;
     public TMP_Text mass;
     public RectTransform cooldownFill;
+    public Animator playerAnimator;
 
     private RectTransform pointerTransform;
     private Vector3 targetPosition;
@@ -85,13 +86,15 @@ public class QuicktimeEvent : MonoBehaviour
     void CheckComplete()
     {
         Destroy(ore);
-        gameObject.transform.parent.gameObject.SetActive(false);
+        gameObject.transform.parent.parent.gameObject.SetActive(false);
         Player.canWalk = true;
     }
 
     IEnumerator InputCooldownCoroutine()
     {
         canInput = false;
+
+        playerAnimator.SetTrigger("Click");
 
         float elapsed = 0f;
 
