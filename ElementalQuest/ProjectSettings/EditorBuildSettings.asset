@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 900c15c0326b37c4ca4d0fd0c8061900
   - enabled: 1
+    path: Assets/Scenes/Levels.unity
+    guid: 616b118aa60c8af4e90c0f3c90cf67ff
+  - enabled: 1
     path: Assets/Scenes/DevLevel2.unity
     guid: 2cc61f6de67c1204795fda62686e8951
   - enabled: 1
@@ -17,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/InventoryLevelTest.unity
+    guid: 78921f538c59bb746b684417878bde0a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f3f206d53c0d3314d807bd3a52924575, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 5341350cc8e3fb942a4f73aae9c645b1, type: 3}

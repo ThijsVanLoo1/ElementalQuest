@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     Vector2 movement;
     private bool oreInRange = false;
     private GameObject ore;
+    public static bool canWalk = true;
 
     private void Update()
     {
@@ -27,7 +28,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if(canWalk) rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,6 +52,7 @@ public class Player : MonoBehaviour
     {
         QuicktimeEvent.ore = ore;
         canvas.SetActive(true);
+        canWalk = false;
     }
 
     public void setIsWalkingTrue()
