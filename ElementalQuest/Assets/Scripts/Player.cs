@@ -64,14 +64,4 @@ public class Player : MonoBehaviour
     {
         animator.SetBool("IsWalking", false);
     }
-
-    public void setIsWalkingTrue()
-    {
-        animator.SetBool("IsWalking", true);
-    }
-
-    public void setIsWalkingFalse()
-    {
-        animator.SetBool("IsWalking", false);
-    }
 }
