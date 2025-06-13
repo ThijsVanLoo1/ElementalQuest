@@ -104,7 +104,6 @@ public class QuicktimeEvent : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             float scale = 0f + (elapsed / inputCooldown);
-            Debug.Log(scale);
             cooldownFill.localScale = new Vector3(1, scale, 1);
             yield return null;
         }
