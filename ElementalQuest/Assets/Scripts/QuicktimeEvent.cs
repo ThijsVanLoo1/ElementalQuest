@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 
@@ -13,8 +12,8 @@ public class QuicktimeEvent : MonoBehaviour
     public float moveSpeed; // Speed of the pointer movement
     private bool canInput = true;
     private float inputCooldown = 0.7f;
-    public Image cooldownFillImage;
     public TMP_Text mass;
+    public RectTransform cooldownFill;
 
     private RectTransform pointerTransform;
     private Vector3 targetPosition;
@@ -87,12 +86,27 @@ public class QuicktimeEvent : MonoBehaviour
     {
         Destroy(ore);
         gameObject.transform.parent.gameObject.SetActive(false);
+        Player.canWalk = true;
     }
 
     IEnumerator InputCooldownCoroutine()
     {
         canInput = false;
-        yield return new WaitForSeconds(inputCooldown);
+
+        float elapsed = 0f;
+
+        cooldownFill.localScale = new Vector3(1, 0, 1);
+
+        while (elapsed < inputCooldown)
+        {
+            elapsed += Time.deltaTime;
+            float scale = 0f + (elapsed / inputCooldown);
+            Debug.Log(scale);
+            cooldownFill.localScale = new Vector3(1, scale, 1);
+            yield return null;
+        }
+        cooldownFill.localScale = new Vector3(1, 1, 1);
+
         canInput = true;
     }
 }

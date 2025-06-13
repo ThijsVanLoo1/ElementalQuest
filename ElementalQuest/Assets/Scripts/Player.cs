@@ -5,15 +5,20 @@ public class Player : MonoBehaviour
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public GameObject canvas;
+    public Animator animator;
 
     Vector2 movement;
     private bool oreInRange = false;
     private GameObject ore;
+    public static bool canWalk = true;
 
     private void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
 
         if (!canvas.activeSelf && oreInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
         {
@@ -23,7 +28,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if(canWalk) rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -47,5 +52,16 @@ public class Player : MonoBehaviour
     {
         QuicktimeEvent.ore = ore;
         canvas.SetActive(true);
+        canWalk = false;
+    }
+
+    public void setIsWalkingTrue()
+    {
+        animator.SetBool("IsWalking", true);
+    }
+
+    public void setIsWalkingFalse()
+    {
+        animator.SetBool("IsWalking", false);
     }
 }

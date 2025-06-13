@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 63c4343960fd35d41a147998a887923b
+guid: 89d32a28daefd284fa6f8cbd326029c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3327956231006686122
-    second: logo_settings_0
+      213: -4843958156473936597
+    second: ElevatorOpen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: logo_settings_0
+      name: ElevatorOpen_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 1024
-        height: 314
+        width: 10
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aab83315f864f2e20800000000000000
-      internalID: 3327956231006686122
+      spriteID: b25d38898bdc6ccb0800000000000000
+      internalID: -4843958156473936597
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      logo_settings_0: 3327956231006686122
+      ElevatorOpen_0: -4843958156473936597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
