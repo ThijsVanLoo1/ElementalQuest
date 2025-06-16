@@ -9889,7 +9889,7 @@ PrefabInstance:
     - target: {fileID: 1440470145497259704, guid: 75f68adc4c308114d922015c29c5aaf1, type: 3}
       propertyPath: canvas
       value: 
-      objectReference: {fileID: 1683720333}
+      objectReference: {fileID: 513832085}
     - target: {fileID: 5386370132109701449, guid: 75f68adc4c308114d922015c29c5aaf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.253689
@@ -9990,6 +9990,11 @@ Transform:
   - {fileID: 2128882776}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &513832085 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3430480825941363512, guid: fb9438d183e5ff84fab821291e5a141f, type: 3}
+  m_PrefabInstance: {fileID: 1632406685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &616250556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10004,8 +10009,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: oreMass
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: oreName
+      value: Hydrogen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: oreSymbol
+      value: H
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278183908639627427, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 1799683832}
     - target: {fileID: 5354482641955334901, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.838524
@@ -10065,8 +10082,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: oreMass
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: oreName
+      value: Nitrogen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: oreSymbol
+      value: N
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278183908639627427, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 1418944943}
     - target: {fileID: 5354482641955334901, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.45
@@ -10213,8 +10242,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: oreMass
-      value: 1
+      value: 53
       objectReference: {fileID: 0}
+    - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: oreName
+      value: Iodine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: oreSymbol
+      value: I
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278183908639627427, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 1002364646}
     - target: {fileID: 5354482641955334901, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.3957639
@@ -10347,6 +10388,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1002364646
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
+    - _WidthHeightRadius: {r: 195.1428, g: 69.2486, b: 30, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1005558470
 GameObject:
   m_ObjectHideFlags: 0
@@ -13482,10 +13564,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: OreObject
       objectReference: {fileID: 0}
+    - target: {fileID: 841447360046383792, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: oreMass
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: oreName
+      value: Carbon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: oreSymbol
+      value: C
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278183908639627427, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 1501007432}
     - target: {fileID: 5354482641955334901, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.21
@@ -13535,6 +13633,129 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+--- !u!21 &1418944943
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
+    - _WidthHeightRadius: {r: 195.1428, g: 69.2486, b: 30, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!21 &1501007432
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
+    - _WidthHeightRadius: {r: 195.1428, g: 69.2486, b: 30, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!21 &1598706793
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
+    - _WidthHeightRadius: {r: 195.1428, g: 69.2486, b: 30, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &1632406685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13543,6 +13764,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3430480825941363512, guid: fb9438d183e5ff84fab821291e5a141f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6020242839541624052, guid: fb9438d183e5ff84fab821291e5a141f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -13629,18 +13854,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6733980431768093869, guid: fb9438d183e5ff84fab821291e5a141f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb9438d183e5ff84fab821291e5a141f, type: 3}
---- !u!1 &1683720333 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6733980431768093869, guid: fb9438d183e5ff84fab821291e5a141f, type: 3}
-  m_PrefabInstance: {fileID: 1632406685}
+--- !u!21 &1799683832
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
+    - _WidthHeightRadius: {r: 195.1428, g: 69.2486, b: 30, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &2027706763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13655,8 +13916,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: oreMass
-      value: 256
+      value: 47
       objectReference: {fileID: 0}
+    - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: oreName
+      value: Silver
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857458883782139051, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: oreSymbol
+      value: Ag
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278183908639627427, guid: 1507da65243d40449850cb0286cf6129, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 1598706793}
     - target: {fileID: 5354482641955334901, guid: 1507da65243d40449850cb0286cf6129, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.352222

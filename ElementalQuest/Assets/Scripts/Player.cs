@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class Player : MonoBehaviour
     private bool oreInRange = false;
     private GameObject ore;
     public static bool canWalk = true;
+
+    private string oreName;
+    private string oreSymbol;
+    private GameObject tooltip;
 
     private void Update()
     {
@@ -37,6 +42,12 @@ public class Player : MonoBehaviour
         {
             oreInRange = true;
             ore = other.gameObject;
+            oreName = ore.GetComponent<Ore>().oreName;
+            oreSymbol = ore.GetComponent<Ore>().oreSymbol;
+            tooltip = ore.GetComponentInChildren<Canvas>(true).gameObject;
+            Debug.Log(tooltip);
+            tooltip.GetComponentInChildren<TextMeshProUGUI>().text = oreName + " (" + oreSymbol + ")";
+            tooltip.SetActive(true);
         }
     }
 
@@ -45,6 +56,7 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Ore"))
         {
             oreInRange = false;
+            tooltip.SetActive(false);
         }
     }
 

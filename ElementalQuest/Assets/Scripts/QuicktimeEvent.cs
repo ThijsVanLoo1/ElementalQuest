@@ -55,6 +55,11 @@ public class QuicktimeEvent : MonoBehaviour
             CheckSuccess();
             StartCoroutine(InputCooldownCoroutine());
         }
+        if(canInput && Input.GetButtonDown("Cancel"))
+        {
+            gameObject.transform.parent.gameObject.SetActive(false);
+            Player.canWalk = true;
+        }
     }
 
     void CheckSuccess()
@@ -86,8 +91,10 @@ public class QuicktimeEvent : MonoBehaviour
     void CheckComplete()
     {
         Destroy(ore);
-        gameObject.transform.parent.parent.gameObject.SetActive(false);
+        gameObject.transform.parent.gameObject.SetActive(false);
         Player.canWalk = true;
+
+        // Do inventory shit <-- Jeffrey
     }
 
     IEnumerator InputCooldownCoroutine()
