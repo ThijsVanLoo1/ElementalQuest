@@ -2863,7 +2863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Made by:\t\tLuuk Westra\n\t\tJeffrey Li\n\t\tSem van den Ende\n\t\tThijs
+  m_text: "Made by:\t\tJeffrey Li\n\t\tLuuk Westra\n\t\tSem van den Ende\n\t\tThijs
     van Loo\n\nThanks for playing our game! :)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c527245463a86f54e8c399bf7329d79f, type: 2}

@@ -1,6 +1,7 @@
 using UnityEngine;
-using TMPro;
 using System.Collections;
+using UnityEngine.UI;
+using TMPro;
 
 public class QuicktimeEvent : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class QuicktimeEvent : MonoBehaviour
     public float moveSpeed; // Speed of the pointer movement
     private bool canInput = true;
     private float inputCooldown = 0.7f;
-    public TMP_Text mass;
     public RectTransform cooldownFill;
     public Animator playerAnimator;
 
@@ -21,6 +21,10 @@ public class QuicktimeEvent : MonoBehaviour
 
     public static GameObject ore;
     private float oreMass;
+
+    public Slider healthBar;
+    public TextMeshProUGUI currentHealth;
+    public TextMeshProUGUI maxHealth;
 
     void Start()
     {
@@ -31,7 +35,11 @@ public class QuicktimeEvent : MonoBehaviour
     private void OnEnable()
     {
         oreMass = ore.GetComponent<Ore>().oreMass;
-        mass.text = "Atoommassa: " + oreMass.ToString();
+        healthBar.maxValue = oreMass;
+        healthBar.value = oreMass;
+
+        currentHealth.text = oreMass.ToString();
+        maxHealth.text = oreMass.ToString();
     }
 
     void Update()
@@ -70,21 +78,18 @@ public class QuicktimeEvent : MonoBehaviour
             if (RectTransformUtility.RectangleContainsScreenPoint(maxForce, pointerTransform.position, null))
             {
                 oreMass -= 3;
-                mass.text = "Atoommassa: " + oreMass.ToString();
-                if (oreMass <= 0) CheckComplete();
             }
             else if (RectTransformUtility.RectangleContainsScreenPoint(normalForce, pointerTransform.position, null))
             {
                 oreMass -= 2;
-                mass.text = "Atoommassa: " + oreMass.ToString();
-                if (oreMass <= 0) CheckComplete();
             }
             else if (RectTransformUtility.RectangleContainsScreenPoint(minForce, pointerTransform.position, null))
             {
                 oreMass -= 1;
-                mass.text = "Atoommassa: " + oreMass.ToString();
-                if (oreMass <= 0) CheckComplete();
             }
+
+            healthBar.value = oreMass;
+            currentHealth.text = (oreMass >= 0) ? oreMass.ToString() : "0";
         }
     }
 
@@ -116,6 +121,8 @@ public class QuicktimeEvent : MonoBehaviour
             yield return null;
         }
         cooldownFill.localScale = new Vector3(1, 1, 1);
+
+        if (oreMass <= 0) CheckComplete();
 
         canInput = true;
     }
