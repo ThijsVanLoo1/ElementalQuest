@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 42c71a4be93b40041b6bbdb51c8ac895
+guid: b0cec30b51cce7744a75fd86fde830b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 784576727433354707
-    second: ore_carbon_0
+      213: 1009049853055315898
+    second: Icon1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ore_carbon_0
+      name: Icon1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 30
+        x: 7
+        y: 2
+        width: 19
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3dd14b1706063ea00800000000000000
-      internalID: 784576727433354707
+      spriteID: abfa504ce7dd00e00800000000000000
+      internalID: 1009049853055315898
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ore_carbon_0: 784576727433354707
+      Icon1_0: 1009049853055315898
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
