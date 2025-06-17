@@ -76,32 +76,13 @@ public class Crafting : MonoBehaviour
             Debug.Log(currentItems);
             if (recipes[i] == currentItems)
             {
-                Debug.Log(recipes[i]);
-                if (resultSlot == null)
-                {
-                    Debug.LogError("resultSlot is null. Did you forget to assign it in the Inspector?");
-                    return;
-                }
-
-                if (recipeResults[i] == null)
-                {
-                    Debug.LogError("recipeResults[" + i + "] is null. Did you assign it in the Inspector?");
-                    return;
-                }
+         
 
                 Image recipeImage = recipeResults[i].GetComponent<Image>();
-                if (recipeImage == null)
-                {
-                    Debug.LogError("recipeResults[" + i + "] is missing an Image component.");
-                    return;
-                }
+           
 
                 Image resultSlotImage = resultSlot.GetComponent<Image>();
-                if (resultSlotImage == null)
-                {
-                    Debug.LogError("resultSlot is missing an Image component.");
-                    return;
-                }
+               
 
                 resultSlot.gameObject.SetActive(true);
                 resultSlotImage.sprite = recipeImage.sprite;

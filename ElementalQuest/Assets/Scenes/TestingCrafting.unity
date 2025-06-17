@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4d9dd36c692b140bb90f4a47690494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: cherry
+  itemName: moon
 --- !u!114 &219326873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  index: 0
+  index: 1
 --- !u!114 &321184306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  index: 0
+  index: 3
 --- !u!114 &324464588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,7 +915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  index: 0
+  index: 4
 --- !u!114 &572230130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4d9dd36c692b140bb90f4a47690494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: moon
+  itemName: cherry
 --- !u!114 &913440227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1836,16 +1836,18 @@ MonoBehaviour:
   - {fileID: 572230129}
   - {fileID: 1663789485}
   itemList:
-  - {fileID: 1060115096}
-  - {fileID: 219326872}
-  - {fileID: 1257630447}
-  - {fileID: 913440226}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   recipes:
   - applenullnullnullnullnull
   - applecherrynullnullnullnull
   recipeResults:
   - {fileID: 1257630447}
-  - {fileID: 1257630447}
+  - {fileID: 219326872}
   resultSlot: {fileID: 1512508726}
 --- !u!1 &1257630443
 GameObject:
@@ -2191,7 +2193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  index: 0
+  index: 2
 --- !u!114 &1504128034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2493,7 +2495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  index: 0
+  index: 5
 --- !u!114 &1663789486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2649,6 +2651,7 @@ GameObject:
   - component: {fileID: 1851756797}
   - component: {fileID: 1851756796}
   - component: {fileID: 1851756795}
+  - component: {fileID: 1851756798}
   m_Layer: 5
   m_Name: CursorThing
   m_TagString: Untagged
@@ -2673,7 +2676,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 45.01188, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1851756795
 MonoBehaviour:
@@ -2701,13 +2704,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 2669869789316320289, guid: cb626464f9b900446b8bc6778e9b1708, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2725,6 +2728,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851756793}
   m_CullTransparentMesh: 1
+--- !u!114 &1851756798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851756793}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 884121f5e5b693d498d4f6a961cb9782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTransform: {fileID: 1257630444}
+  cursorSpeed: 1000
 --- !u!1001 &5676185085782632480
 PrefabInstance:
   m_ObjectHideFlags: 0
