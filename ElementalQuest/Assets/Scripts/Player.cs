@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Threading;
 
 public class Player : MonoBehaviour
 {
@@ -17,14 +18,26 @@ public class Player : MonoBehaviour
     private string oreSymbol;
     private GameObject tooltip;
 
+    AudioManager audioManager;
+    private float Timer;
+
+    //Finds Audio before first frame
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void Update()
     {
+        Timer += Time.deltaTime;
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
 
+        //Mining QTE Start
         if (!canvas.activeSelf && oreInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
         {
             startQuickTime();
@@ -33,7 +46,22 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(canWalk) rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+
+        //Makes Player walk
+        if (canWalk)
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
+
+        if (movement.x != 0 || movement.y != 0)
+        {
+            if (Timer > 4.3f)
+            {
+                audioManager.playSFX(audioManager.Walking);
+                Timer = 0;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

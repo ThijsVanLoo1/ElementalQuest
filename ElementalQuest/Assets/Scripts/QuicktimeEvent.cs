@@ -26,6 +26,14 @@ public class QuicktimeEvent : MonoBehaviour
     public TextMeshProUGUI currentHealth;
     public TextMeshProUGUI maxHealth;
 
+    AudioManager audioManager;
+
+    //Finds Audio before first frame
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Start()
     {
         pointerTransform = GetComponent<RectTransform>();
@@ -61,6 +69,7 @@ public class QuicktimeEvent : MonoBehaviour
         if (canInput && (Input.GetButtonDown("MineOre") || Input.GetKeyDown(KeyCode.Mouse0)))
         {
             CheckSuccess();
+            audioManager.playSFX(audioManager.MineSound);
             StartCoroutine(InputCooldownCoroutine());
         }
         if(canInput && Input.GetButtonDown("Cancel"))
