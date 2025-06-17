@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Crafting : MonoBehaviour
 {
-    private Item currentItem;
+    public Item currentItem;
     public Image customCursor;
     public Slot[] craftingSlots;
     private Sprite defaultCursorSprite;
@@ -22,36 +22,10 @@ public class Crafting : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0) || Input.GetButtonDown("Submit"))
-        {
-            if (currentItem != null)
-            {
-                Slot nearestSlot = null;
-                float shortestDistance = float.MaxValue;
-
-                foreach (Slot slot in craftingSlots)
-                {
-                    float distance = Vector2.Distance(controllerCursor.position, slot.transform.position);
-
-                    if (distance < shortestDistance)
-                    {
-                        shortestDistance = distance;
-                        nearestSlot = slot;
-                    }
-                }
-
-                if (nearestSlot != null)
-                {
-                    nearestSlot.gameObject.SetActive(true);
-                    nearestSlot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
-                    nearestSlot.item = currentItem;
-                    itemList[nearestSlot.index] = currentItem;
-
-                    currentItem = null;
-                    CheckForCompletedRecipe();
-                }
-            }
-        }
+       
+            
+            
+        
 
 
 
@@ -94,16 +68,11 @@ public class Crafting : MonoBehaviour
         }
 
     }
-    public void ClearSlot(Slot slot)
-    {
-        slot.item = null;
-        itemList[slot.index] = null;
-        slot.gameObject.SetActive(false);
-        CheckForCompletedRecipe();
-    }
+    
 
     public void OnMouseDownItem(Item item)
     {
+        Debug.Log("please work");
         if (currentItem == null)
         {
             currentItem = item;
@@ -113,6 +82,29 @@ public class Crafting : MonoBehaviour
         {
             customCursor.sprite = defaultCursorSprite;
             currentItem = null;
+        }
+    }
+    public void OnMouseDownSlot(Slot slot)
+    {
+        Debug.Log("it almost works");
+        if (currentItem != null)
+        {
+          
+                slot.gameObject.SetActive(true);
+                slot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
+                slot.item = currentItem;
+                itemList[slot.index] = currentItem;
+
+                currentItem = null;
+                CheckForCompletedRecipe();
+            
+        }
+        else
+        {
+            slot.item = null;
+            itemList[slot.index] = null;
+            slot.GetComponent<Image>().sprite = slot.defaultSprite;
+            CheckForCompletedRecipe();
         }
     }
 }
