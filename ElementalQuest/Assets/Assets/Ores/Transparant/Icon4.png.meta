@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9b4d365eae63d4c4c816cfecce5247f3
+guid: 0341e1fbbc7e5d64392d4f6a97fc4032
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5560596677172898774
-    second: ore_nitrogen_0
+      213: -2281458042351831758
+    second: Icon4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ore_nitrogen_0
+      name: Icon4_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 31
+        x: 4
+        y: 1
+        width: 24
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2454ed88cac4d2b0800000000000000
-      internalID: -5560596677172898774
+      spriteID: 23539a78ff1a650e0800000000000000
+      internalID: -2281458042351831758
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ore_nitrogen_0: -5560596677172898774
+      Icon4_0: -2281458042351831758
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
