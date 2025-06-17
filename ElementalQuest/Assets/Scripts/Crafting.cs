@@ -7,25 +7,31 @@ public class Crafting : MonoBehaviour
     private Item currentItem;
     public Image customCursor;
     public Slot[] craftingSlots;
+    private Sprite defaultCursorSprite;
+    public Transform controllerCursor;
+
 
     public List<Item> itemList;
     public string[] recipes;
     public Item[] recipeResults;
     public Slot resultSlot;
 
+    private void Start()
+    {
+           defaultCursorSprite = customCursor.sprite;
+    }
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) || Input.GetButtonDown("Submit"))
         {
             if (currentItem != null)
             {
-                customCursor.gameObject.SetActive(false);
                 Slot nearestSlot = null;
                 float shortestDistance = float.MaxValue;
 
                 foreach (Slot slot in craftingSlots)
                 {
-                    float distance = Vector2.Distance(Input.mousePosition, slot.transform.position);
+                    float distance = Vector2.Distance(controllerCursor.position, slot.transform.position);
 
                     if (distance < shortestDistance)
                     {
@@ -48,10 +54,7 @@ public class Crafting : MonoBehaviour
         }
 
 
-        if (currentItem != null)
-        {
-            customCursor.transform.position = Input.mousePosition;
-        }
+
 
     }
     void CheckForCompletedRecipe()
@@ -104,12 +107,11 @@ public class Crafting : MonoBehaviour
         if (currentItem == null)
         {
             currentItem = item;
-            customCursor.gameObject.SetActive(true);
             customCursor.sprite = currentItem.GetComponent<Image>().sprite;
         }
         else
         {
-            customCursor.gameObject.SetActive(false);
+            customCursor.sprite = defaultCursorSprite;
             currentItem = null;
         }
     }
