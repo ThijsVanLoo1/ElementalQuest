@@ -4,9 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    public GameObject fadeToBlack;
     public void PlayButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        fadeToBlack.SetActive(true);
     }
 
     public void QuitButton()
