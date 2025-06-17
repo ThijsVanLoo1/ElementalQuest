@@ -4,27 +4,53 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
+
+    [Header("--music--")]
     public AudioClip[] Background;
+
+    [Header("--sfx--")]
+    public AudioClip MineSound;
+    public AudioClip RandomCaveSound;
+    public AudioClip Walking;
 
     private int currentTrackIndex = 0;
     private float timer = 0f;
+    
+    //function other scripts use for playing refrencing audio
+    public void playSFX(AudioClip clip)
+    {
+        SFXSource.PlayOneShot(clip);
+    }
 
+    //shuffle array & play music
     private void Start()
     {
         ShuffleArray(Background);
         PlayCurrentTrack();
+
     }
 
+    //if no music playing > next track
     private void Update()
     {
 
         if (!musicSource.isPlaying)
         {
             timer += Time.deltaTime;
+            
+            //random cave sound
+            if (timer == 2.22f)
+            {
+                SFXSource.clip = RandomCaveSound;
+                SFXSource.Play();
+
+            }
+
             if (timer > 10f)
             {
 
                 PlayNextTrack();
+                timer = 0f;
             }
         }
     }
