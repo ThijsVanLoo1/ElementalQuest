@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public Button firstButton;
     private bool isPaused = false;
 
     private void Update()
@@ -13,6 +16,10 @@ public class PauseMenu : MonoBehaviour
             pauseMenu.SetActive(true);
             isPaused = true;
             Time.timeScale = 0;
+
+            // Selecteer eerste knop
+            EventSystem.current.SetSelectedGameObject(null); // reset eerst
+            EventSystem.current.SetSelectedGameObject(firstButton.gameObject);
         } else if(Input.GetButtonDown("Pause") && isPaused)
         {
             pauseMenu.SetActive(false);
