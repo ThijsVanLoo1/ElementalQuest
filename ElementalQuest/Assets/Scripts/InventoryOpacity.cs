@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,12 @@ public class InventoryOpacity : MonoBehaviour
     public GameObject hiddenInventory;
     public GameObject VisibleInventory;
 
+    public static GameObject ore;
+    private string oreName;
+    public QuicktimeEvent quicktimeEvent; // Assign in Inspector
+
+
+
     // Set opacity (0 = transparent, 1 = opaque)
     public void SetOpacity(float alpha)
     {
@@ -14,8 +21,6 @@ public class InventoryOpacity : MonoBehaviour
         color.a = Mathf.Clamp01(alpha); // Ensure alpha is between 0 and 1
         panelImage.color = color;
     }
-
-
 
     void Start()
     {
@@ -25,11 +30,11 @@ public class InventoryOpacity : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("OpenInventory")){
+        if (Input.GetButtonDown("OpenInventory"))
+        {
             ToggleCanvas();
         }
     }
-
 
     // Optionally: Toggle visibility
     public void ToggleCanvas()
@@ -38,5 +43,15 @@ public class InventoryOpacity : MonoBehaviour
         VisibleInventory.SetActive(!hiddenInventory.activeSelf);
     }
 
+    public void SendToInventory()
+    {
+        oreName = ore.GetComponent<Ore>().oreName;
+        Debug.Log(oreName);
+    }
 
+    public void SetOreName(string name)
+    {
+        oreName = name;
+        Debug.Log(oreName);
+    }
 }
