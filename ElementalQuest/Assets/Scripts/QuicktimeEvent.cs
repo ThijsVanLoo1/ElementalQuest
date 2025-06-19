@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
+using System.Security.Cryptography.X509Certificates;
 
 public class QuicktimeEvent : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class QuicktimeEvent : MonoBehaviour
 
     public static GameObject ore;
     private float oreMass;
+    public string oreName;
 
     public Slider healthBar;
     public TextMeshProUGUI currentHealth;
@@ -43,6 +45,7 @@ public class QuicktimeEvent : MonoBehaviour
     private void OnEnable()
     {
         oreMass = ore.GetComponent<Ore>().oreMass;
+        oreName = ore.GetComponent<Ore>().oreName;
         healthBar.maxValue = oreMass;
         healthBar.value = oreMass;
 
@@ -104,11 +107,18 @@ public class QuicktimeEvent : MonoBehaviour
 
     void CheckComplete()
     {
-        Destroy(ore);
-        gameObject.transform.parent.gameObject.SetActive(false);
         Player.canWalk = true;
 
         // Do inventory shit <-- Jeffrey
+        InventoryOpacity inventory = FindFirstObjectByType<InventoryOpacity>();
+        if (inventory != null)
+        {
+            inventory.SetOreName(oreName);
+        }
+
+        Destroy(ore);
+        gameObject.transform.parent.gameObject.SetActive(false);
+
     }
 
     IEnumerator InputCooldownCoroutine()
@@ -125,7 +135,6 @@ public class QuicktimeEvent : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             float scale = 0f + (elapsed / inputCooldown);
-            Debug.Log(scale);
             cooldownFill.localScale = new Vector3(1, scale, 1);
             yield return null;
         }
