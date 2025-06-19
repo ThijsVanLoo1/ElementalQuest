@@ -19,6 +19,7 @@ public class Crafting : MonoBehaviour
 
     public GameObject water;
     public GameObject ethene;
+    public GameObject ethanol;
     private void Start()
     {
         defaultCursorSprite = customCursor.sprite;
@@ -82,8 +83,13 @@ public class Crafting : MonoBehaviour
         else if (i == 1) {
             ethene.gameObject.SetActive(true);
             lastCompletedRecipe = -1;
-        } 
-        
+        }
+        else if (i == 2)
+        {
+            ethanol.gameObject.SetActive(true);
+            lastCompletedRecipe = -1;
+        }
+
     }
     public void OnMouseDownItem(Item item)
     {

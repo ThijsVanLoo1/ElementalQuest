@@ -902,7 +902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.5482, y: 3.9727}
+  m_AnchoredPosition: {x: -0.00001812, y: 15}
   m_SizeDelta: {x: 779.3423, y: 506.8659}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419911290
@@ -2208,6 +2208,7 @@ MonoBehaviour:
   - {fileID: 1127870679}
   resultSlot: {fileID: 1512508726}
   water: {fileID: 1049088091}
+  ethene: {fileID: 1127870678}
 --- !u!1 &1127870678
 GameObject:
   m_ObjectHideFlags: 0
