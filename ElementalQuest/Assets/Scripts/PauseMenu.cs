@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
-    public Button firstButton;
+    public GameObject pauseFirstButton;
+    
     private bool isPaused = false;
 
     private void Update()
@@ -17,10 +18,10 @@ public class PauseMenu : MonoBehaviour
             isPaused = true;
             Time.timeScale = 0;
 
-            // Selecteer eerste knop
-            EventSystem.current.SetSelectedGameObject(null); // reset eerst
-            EventSystem.current.SetSelectedGameObject(firstButton.gameObject);
-        } else if(Input.GetButtonDown("Pause") && isPaused)
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+        } 
+        else if (Input.GetButtonDown("Pause") && isPaused)
         {
             pauseMenu.SetActive(false);
             isPaused = false;
@@ -28,19 +29,19 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void resumeGame()
+    public void ResumeGame()
     {
         pauseMenu.SetActive(false);
         isPaused = false;
         Time.timeScale = 1;
     }
 
-    public void options()
+    public void Options()
     {
         //Hier komen options als we die ooit hebben
     }
 
-    public void quitGame()
+    public void QuitGame()
     {
         pauseMenu.SetActive(false);
         isPaused = false;

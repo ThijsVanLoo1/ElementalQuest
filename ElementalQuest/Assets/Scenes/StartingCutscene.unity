@@ -580,6 +580,7 @@ GameObject:
   - component: {fileID: 1929137398}
   - component: {fileID: 1929137402}
   - component: {fileID: 1929137403}
+  - component: {fileID: 1929137404}
   m_Layer: 5
   m_Name: Cutscene
   m_TagString: Untagged
@@ -717,6 +718,18 @@ MonoBehaviour:
   - ...at the bottom of the ravine. . .
   - I HAD to get it back!
   subtitle: {fileID: 378517940}
+--- !u!114 &1929137404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929137397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e82ab09e07e8c4abdfa1376cfed663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2065731269
 GameObject:
   m_ObjectHideFlags: 0
