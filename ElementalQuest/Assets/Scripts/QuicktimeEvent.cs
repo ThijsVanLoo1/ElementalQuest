@@ -113,9 +113,8 @@ public class QuicktimeEvent : MonoBehaviour
         InventoryOpacity inventory = FindFirstObjectByType<InventoryOpacity>();
         if (inventory != null)
         {
-            inventory.SetOreName(oreName);
+            inventory.AddToInventory(oreName);
         }
-
         Destroy(ore);
         gameObject.transform.parent.gameObject.SetActive(false);
 

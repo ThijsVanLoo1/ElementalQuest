@@ -2,7 +2,8 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryOpacity : MonoBehaviour
+
+public class InventoryCopy : MonoBehaviour
 {
     public GameObject hiddenInventory;
     public GameObject VisibleInventory;
@@ -224,3 +225,4 @@ public class InventoryOpacity : MonoBehaviour
         }
     }
 }
+
