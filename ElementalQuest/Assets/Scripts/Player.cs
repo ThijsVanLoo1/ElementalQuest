@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject canvas;
     public Animator animator;
+    public Transform spotLightTransform;
 
     Vector2 movement;
     private bool oreInRange = false;
@@ -41,6 +42,14 @@ public class Player : MonoBehaviour
         if (!canvas.activeSelf && oreInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
         {
             startQuickTime();
+        }
+
+        //Lighting
+        if (movement != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(movement.x, -movement.y) * Mathf.Rad2Deg;
+            angle += 180f;
+            spotLightTransform.rotation = Quaternion.Euler(0, 0, angle);
         }
     }
 
