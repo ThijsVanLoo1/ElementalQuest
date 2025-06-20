@@ -24,16 +24,10 @@ public class Crafting : MonoBehaviour
     private void Start()
     {
         defaultCursorSprite = customCursor.sprite;
+        //WHEN ORE IS MINED -> SET ITEM OBJECT TRUE (OR FROM INVENTORY)
     }
     private void Update()
     {
-
-
-
-
-
-
-
 
     }
     void CheckForCompletedRecipe()
@@ -76,6 +70,7 @@ public class Crafting : MonoBehaviour
 
     void AddCompletedElement(int i)
     {
+        // ADD TO INVENTORY IN EVERY LOOP
         if (i == 0)
         {
             water.gameObject.SetActive(true);
