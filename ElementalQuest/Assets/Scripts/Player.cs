@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private GameObject tooltip;
 
     AudioManager audioManager;
-    private float Timer;
+    private float Timer = 5f;
 
     //Finds Audio before first frame
     private void Awake()
@@ -71,6 +71,13 @@ public class Player : MonoBehaviour
                 Timer = 0;
             }
         }
+
+        if (movement.x == 0 && movement.y == 0)
+        {
+            Timer = 5f;
+            audioManager.StopSFX();
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
