@@ -45,7 +45,6 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Timer += Time.deltaTime;
-        Timer2 += Time.deltaTime;
         if (!canWalk) return;
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -61,15 +60,6 @@ public class Player : MonoBehaviour
         if (!canvas.activeSelf && craftingTableInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
         {
             startCrafting();
-        }
-        if (!canvas.activeSelf && signInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
-        {
-            readSign();
-        }
-        //hide canvas after 3s
-        if (signCanvas.activeSelf && Timer2 > 3f)
-        {
-            signCanvas.SetActive(false);
         }
         if (!canvas.activeSelf && craftingTableInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
         {
@@ -203,19 +193,12 @@ public class Player : MonoBehaviour
         canWalk = false;
     }
 
-    private void readSign()
-    {
-        signCanvas.SetActive(true);
-        Timer2 = 0f;
-    }
-
     private void repairElevator()
     {
         if (fuel.activeSelf)
         {
             audioManager.StopSFX();
             audioManager.playSFX(audioManager.crafting);
-            Timer2 = 0f;
             craftingSFXPlaying = true;
         }
     }
