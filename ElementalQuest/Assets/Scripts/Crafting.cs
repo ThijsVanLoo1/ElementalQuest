@@ -16,6 +16,7 @@ public class Crafting : MonoBehaviour
     public string[] recipes;
     public Item[] recipeResults;
     public Slot resultSlot;
+    public GameObject canvas;
 
     public GameObject water;
     public GameObject ethene;
@@ -29,7 +30,10 @@ public class Crafting : MonoBehaviour
     }
     private void Update()
     {
-
+        if ((Input.GetButtonDown("Cancel")))
+        {
+            closeCraftingGrid();
+        }
     }
     void CheckForCompletedRecipe()
     {
@@ -89,6 +93,11 @@ public class Crafting : MonoBehaviour
             lastCompletedRecipe = -1;
         }
 
+    }
+    void closeCraftingGrid()
+    {
+        canvas.SetActive(false);
+        Player.canWalk = true;
     }
     public void OnMouseDownItem(Item item)
     {

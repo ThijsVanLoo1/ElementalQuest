@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public GameObject signCanvas;
     public Animator animator;
     public Transform spotLightTransform;
+    public GameObject fuel;
 
     Vector2 movement;
     private bool oreInRange = false;
@@ -171,6 +172,11 @@ public class Player : MonoBehaviour
             oreInRange = false;
             tooltip.SetActive(false);
         }
+        if (other.CompareTag("CraftingTable"))
+        {
+            craftingTableInRange = false;
+            tooltip.SetActive(false);
+        }
 
         if (other.CompareTag("Sign"))
         {
@@ -205,11 +211,13 @@ public class Player : MonoBehaviour
 
     private void repairElevator()
     {
-        audioManager.StopSFX();
-        audioManager.playSFX(audioManager.crafting);
-        Timer2 = 0f;
-        craftingSFXPlaying = true;
-
+        if (fuel.activeSelf)
+        {
+            audioManager.StopSFX();
+            audioManager.playSFX(audioManager.crafting);
+            Timer2 = 0f;
+            craftingSFXPlaying = true;
+        }
     }
 
     public void setIsWalkingTrue()

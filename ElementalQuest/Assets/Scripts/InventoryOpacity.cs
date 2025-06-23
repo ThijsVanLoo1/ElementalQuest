@@ -9,7 +9,7 @@ public class InventoryOpacity : MonoBehaviour
 
     public static GameObject ore;
     private string oreName;
-
+    public Transform items;
 
     //retrieve all images/elements
     public Image Image_H;
@@ -109,15 +109,18 @@ public class InventoryOpacity : MonoBehaviour
     //in deze functie doorsturen naar crafting voor luuk, vraag om verduidelijking als nodig :)
     private Image GetImageByOreName(string name)
     {
+        Debug.Log(name);
         switch (name)
         {
             case "Hydrogen":
+                items.Find("hydrogen").gameObject.SetActive(true);
                 return Image_H;
             case "lithium":
                 return Image_Li;
             case "Berium":
                 return Image_Be;
-            case "Natrium":
+            case "Sodium":
+                items.Find("sodium").gameObject.SetActive(true);
                 return Image_Na;
             case "Magnesium":
                 return Image_Mg;
@@ -149,11 +152,11 @@ public class InventoryOpacity : MonoBehaviour
                 return Image_Mn;
             case "Technetium":
                 return Image_Tc;
-            case "Ijzer":
+            case "Iron":
                 return Image_Fe;
             case "Ruthenium":
                 return Image_Ru;
-            case "Kobalt":
+            case "Cobalt":
                 return Image_Co;
             case "Rhodium":
                 return Image_Rh;
@@ -161,9 +164,9 @@ public class InventoryOpacity : MonoBehaviour
                 return Image_Ni;
             case "Palladium":
                 return Image_Pd;
-            case "Koper":
+            case "Copper":
                 return Image_Cu;
-            case "Zilver":
+            case "Silver":
                 return Image_Ag;
             case "Zink":
                 return Image_Zn;
@@ -173,11 +176,14 @@ public class InventoryOpacity : MonoBehaviour
                 return Image_He;
             case "Barium":
                 return Image_B;
-            case "Koolstof":
+            case "Carbon":
+                items.Find("carbon").gameObject.SetActive(true);
                 return Image_C;
-            case "Stikstof":
+            case "Nitrogen":
+                items.Find("nitrogen").gameObject.SetActive(true);
                 return Image_N;
-            case "Zuurstof":
+            case "Oxygen":
+                items.Find("oxygen").gameObject.SetActive(true);
                 return Image_O;
             case "Fluor":
                 return Image_F;
@@ -191,7 +197,8 @@ public class InventoryOpacity : MonoBehaviour
                 return Image_P;
             case "Zwavel":
                 return Image_S;
-            case "Chloor":
+            case "Chlorine":
+                items.Find("chlorine").gameObject.SetActive(true);
                 return Image_Cl;
             case "Argon":
                 return Image_Ar;

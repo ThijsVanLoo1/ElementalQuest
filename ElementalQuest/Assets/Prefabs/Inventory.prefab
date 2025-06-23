@@ -3122,6 +3122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hiddenInventory: {fileID: 7923839849379060100}
   VisibleInventory: {fileID: 7426709419052021171}
+  items: {fileID: 0}
   Image_H: {fileID: 2838412636010605896}
   Image_Li: {fileID: 1391396329351801740}
   Image_Be: {fileID: 3514431951362870020}
