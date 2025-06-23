@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Threading;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Player : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
     AudioManager audioManager;
     private float Timer = 5f;
     private float Timer2 = 0f;
+    private bool craftingSFXPlaying = false;
 
     //Finds Audio before first frame
     private void Awake()
@@ -76,6 +78,13 @@ public class Player : MonoBehaviour
         {
             repairElevator();
         }
+        if (craftingSFXPlaying && Timer2 > 3f)
+        {
+            SceneManager.LoadScene("Ending");
+
+        }
+
+
 
         //Lighting
         if (movement != Vector2.zero)
@@ -196,8 +205,11 @@ public class Player : MonoBehaviour
 
     private void repairElevator()
     {
-        //inventory check
-        SceneManager.LoadScene("Ending");
+        audioManager.StopSFX();
+        audioManager.playSFX(audioManager.crafting);
+        Timer2 = 0f;
+        craftingSFXPlaying = true;
+
     }
 
     public void setIsWalkingTrue()

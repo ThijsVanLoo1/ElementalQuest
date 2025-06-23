@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip MineSound;
     public AudioClip RandomCaveSound;
     public AudioClip Walking;
+    public AudioClip crafting; //for elevator
+    public AudioClip brewing;  //for making elements
 
     private int currentTrackIndex = 0;
     private float timer = 0f;
