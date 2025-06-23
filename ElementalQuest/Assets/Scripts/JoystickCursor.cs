@@ -6,9 +6,8 @@ using UnityEngine.EventSystems;
 
 public class JoystickMouse : MonoBehaviour
 {
-
+    public float cursorSpeed = 1000f;
     public float moveSpeed = 5f;
-    public Rigidbody2D rb;
 
     Vector2 movement;
     public Crafting crafting;
@@ -19,10 +18,19 @@ public class JoystickMouse : MonoBehaviour
     public ItemDescription itemDescription;
 
 
-    private void Update()
+    void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+        Debug.Log($"moveX: {moveX}, moveY: {moveY}, controllerCursor: {controllerCursor}");
+        // Only move if controllerCursor is assigned
+        if (controllerCursor != null)
+        {
+            Vector3 movement = new Vector3(moveX, moveY, 0) * cursorSpeed * Time.deltaTime;
+            controllerCursor.anchoredPosition += new Vector2(movement.x, movement.y);
+
+            // Optionally, clamp to the bounds of the canvas here
+        }
         hoveredItem = null;
         hoveredSlot = null;
         PointerEventData pointerData = new PointerEventData(UnityEngine.EventSystems.EventSystem.current);
@@ -82,10 +90,7 @@ public class JoystickMouse : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-    }
+ 
 
 }
 
