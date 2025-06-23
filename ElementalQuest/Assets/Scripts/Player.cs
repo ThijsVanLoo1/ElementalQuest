@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Threading;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -8,14 +9,20 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject canvas;
     public GameObject crafting;
+    public GameObject signCanvas;
     public Animator animator;
     public Transform spotLightTransform;
 
     Vector2 movement;
     private bool oreInRange = false;
     private bool craftingTableInRange = false;
+    private bool elevatorInRange = false;
+    private bool signInRange = false;
+
     private GameObject ore;
     private GameObject craftingTable;
+    private GameObject elevator;
+    private GameObject sign;
     public static bool canWalk = true;
 
     private string oreName;
@@ -24,6 +31,7 @@ public class Player : MonoBehaviour
 
     AudioManager audioManager;
     private float Timer = 5f;
+    private float Timer2 = 0f;
 
     //Finds Audio before first frame
     private void Awake()
@@ -34,6 +42,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Timer += Time.deltaTime;
+        Timer2 += Time.deltaTime;
         if (!canWalk) return;
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -49,6 +58,23 @@ public class Player : MonoBehaviour
         if (!canvas.activeSelf && craftingTableInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
         {
             startCrafting();
+        }
+        if (!canvas.activeSelf && signInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
+        {
+            readSign();
+        }
+        //hide canvas after 3s
+        if (signCanvas.activeSelf && Timer2 > 3f)
+        {
+            signCanvas.SetActive(false);
+        }
+        if (!canvas.activeSelf && craftingTableInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
+        {
+            startCrafting();
+        }
+        if (!canvas.activeSelf && elevatorInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
+        {
+            repairElevator();
         }
 
         //Lighting
@@ -110,6 +136,23 @@ public class Player : MonoBehaviour
             tooltip.SetActive(true);
 
         }
+
+        else if (other.CompareTag("Elevator"))
+        {
+            Debug.Log("working elevator");
+            elevatorInRange = true;
+            elevator = other.gameObject;
+            tooltip = elevator.GetComponentInChildren<Canvas>(true).gameObject;
+            tooltip.SetActive(true);
+        }
+
+        else if (other.CompareTag("Sign"))
+        {
+            signInRange = true;
+            sign = other.gameObject;
+            tooltip = sign.GetComponentInChildren<Canvas>(true).gameObject;
+            tooltip.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -117,6 +160,18 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Ore"))
         {
             oreInRange = false;
+            tooltip.SetActive(false);
+        }
+
+        if (other.CompareTag("Sign"))
+        {
+            signInRange = false;
+            tooltip.SetActive(false);
+        }
+
+        if (other.CompareTag("Elevator"))
+        {
+            signInRange = false;
             tooltip.SetActive(false);
         }
     }
@@ -131,6 +186,18 @@ public class Player : MonoBehaviour
     {
         crafting.SetActive(true);
         canWalk = false;
+    }
+
+    private void readSign()
+    {
+        signCanvas.SetActive(true);
+        Timer2 = 0f;
+    }
+
+    private void repairElevator()
+    {
+        //inventory check
+        SceneManager.LoadScene("Ending");
     }
 
     public void setIsWalkingTrue()

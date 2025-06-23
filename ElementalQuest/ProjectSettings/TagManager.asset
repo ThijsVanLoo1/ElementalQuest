@@ -7,6 +7,8 @@ TagManager:
   - Ore
   - Audio
   - CraftingTable
+  - Sign
+  - Elevator
   layers:
   - Default
   - TransparentFX
