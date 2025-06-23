@@ -127,6 +127,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1635092531250893642, guid: d13c404e9f823bd4c8a0a78f24054f36, type: 3}
+      propertyPath: Walking
+      value: 
+      objectReference: {fileID: 8300000, guid: b46a24746179fea4292687df8a3d1586, type: 3}
+    - target: {fileID: 1635092531250893642, guid: d13c404e9f823bd4c8a0a78f24054f36, type: 3}
+      propertyPath: RandomCaveSound
+      value: 
+      objectReference: {fileID: 8300000, guid: db70823a44e103c41ae29210d5a97ad5, type: 3}
     - target: {fileID: 4409951646800031540, guid: d13c404e9f823bd4c8a0a78f24054f36, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.98
