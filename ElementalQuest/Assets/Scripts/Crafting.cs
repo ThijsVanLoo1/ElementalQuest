@@ -21,6 +21,7 @@ public class Crafting : MonoBehaviour
     public GameObject ethene;
     public GameObject ethanol;
     public GameObject hydrochloricAcid;
+    public GameObject salt;
     private void Start()
     {
         defaultCursorSprite = customCursor.sprite;
@@ -80,6 +81,11 @@ public class Crafting : MonoBehaviour
         else if (i == 3)
         {
             hydrochloricAcid.gameObject.SetActive(true);
+            lastCompletedRecipe = -1;
+        }
+        else if (i == 4)
+        {
+            salt.gameObject.SetActive(true);
             lastCompletedRecipe = -1;
         }
 
