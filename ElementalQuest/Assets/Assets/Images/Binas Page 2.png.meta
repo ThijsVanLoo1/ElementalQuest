@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6c5dfc7997e9b5c419b7ddcf7778fac4
+guid: 5754a7a27e5df6c44baa3c11aec96ad2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -263793354721383058
-    second: Binas Page 1_0
+      213: -573695583007725727
+    second: Binas Page 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,11 +100,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Binas Page 1_0
+      name: Binas Page 2_0
       rect:
         serializedVersion: 2
         x: 85
-        y: 72
+        y: 69
         width: 1604
         height: 2343
       alignment: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e6d29bd6751d65cf0800000000000000
-      internalID: -263793354721383058
+      spriteID: 1672d9528e2d908f0800000000000000
+      internalID: -573695583007725727
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Binas Page 1_0: -263793354721383058
+      Binas Page 2_0: -573695583007725727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
