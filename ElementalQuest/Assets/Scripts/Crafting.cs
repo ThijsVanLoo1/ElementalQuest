@@ -35,29 +35,22 @@ public class Crafting : MonoBehaviour
         resultSlot.gameObject.SetActive(false);
         resultSlot.item = null;
 
-        string currentItems = "";
+        List<string> currentItemNames = new List<string>();
         foreach (Item item in itemList)
         {
             if (item != null)
-            {
-                currentItems += item.itemName;
-            }
-            else
-            {
-                currentItems += "null";
-            }
+                currentItemNames.Add(item.itemName);
         }
+        currentItemNames.Sort();
+        string currentItems = string.Join("+", currentItemNames);
+        Debug.Log(currentItems);
+
         for (int i = 0; i < recipes.Length; i++)
         {
             if (recipes[i] == currentItems)
             {
-
-
                 Image recipeImage = recipeResults[i].GetComponent<Image>();
-
-
                 Image resultSlotImage = resultSlot.GetComponent<Image>();
-
 
                 resultSlot.gameObject.SetActive(true);
                 resultSlotImage.sprite = recipeImage.sprite;
@@ -65,7 +58,6 @@ public class Crafting : MonoBehaviour
                 lastCompletedRecipe = i;
             }
         }
-
     }
 
     void AddCompletedElement(int i)

@@ -22,14 +22,13 @@ public class JoystickMouse : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
-        Debug.Log($"moveX: {moveX}, moveY: {moveY}, controllerCursor: {controllerCursor}");
-        // Only move if controllerCursor is assigned
+
         if (controllerCursor != null)
         {
             Vector3 movement = new Vector3(moveX, moveY, 0) * cursorSpeed * Time.deltaTime;
             controllerCursor.anchoredPosition += new Vector2(movement.x, movement.y);
 
-            // Optionally, clamp to the bounds of the canvas here
+
         }
         hoveredItem = null;
         hoveredSlot = null;
