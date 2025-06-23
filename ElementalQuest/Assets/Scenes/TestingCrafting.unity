@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &22488270 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6355511457360947254, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-  m_PrefabInstance: {fileID: 129726228154514019}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf4d9dd36c692b140bb90f4a47690494, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &339484289
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,10 +453,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: recipes.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
       propertyPath: 'recipes.Array.data[0]'
       value: hydrogen+hydrogen+oxygen
       objectReference: {fileID: 0}
@@ -483,18 +468,6 @@ PrefabInstance:
       propertyPath: 'recipes.Array.data[3]'
       value: chlorine+hydrogen
       objectReference: {fileID: 0}
-    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: 'recipes.Array.data[4]'
-      value: chlorinehydrogennullnullnullnull
-      objectReference: {fileID: 0}
-    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: recipeResults.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: 'recipeResults.Array.data[4]'
-      value: 
-      objectReference: {fileID: 22488270}
     - target: {fileID: 2816333058821305994, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

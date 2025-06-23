@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ore
   - Audio
+  - CraftingTable
   layers:
   - Default
   - TransparentFX
