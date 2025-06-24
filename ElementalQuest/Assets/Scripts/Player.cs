@@ -1,8 +1,6 @@
 using UnityEngine;
-using TMPro;
-using System.Threading;
 using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -19,7 +17,6 @@ public class Player : MonoBehaviour
     private bool oreInRange = false;
     private bool craftingTableInRange = false;
     private bool elevatorInRange = false;
-    private bool signInRange = false;
 
     private GameObject ore;
     private GameObject craftingTable;
@@ -139,7 +136,6 @@ public class Player : MonoBehaviour
 
         else if (other.CompareTag("Elevator"))
         {
-            Debug.Log("working elevator");
             elevatorInRange = true;
             elevator = other.gameObject;
             tooltip = elevator.GetComponentInChildren<Canvas>(true).gameObject;
@@ -148,7 +144,6 @@ public class Player : MonoBehaviour
 
         else if (other.CompareTag("Sign"))
         {
-            signInRange = true;
             sign = other.gameObject;
             tooltip = sign.GetComponentInChildren<Canvas>(true).gameObject;
             tooltip.SetActive(true);
@@ -170,13 +165,11 @@ public class Player : MonoBehaviour
 
         if (other.CompareTag("Sign"))
         {
-            signInRange = false;
             tooltip.SetActive(false);
         }
 
         if (other.CompareTag("Elevator"))
         {
-            signInRange = false;
             tooltip.SetActive(false);
         }
     }
