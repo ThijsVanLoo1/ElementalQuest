@@ -182,6 +182,7 @@ public class Player : MonoBehaviour
 
         if (other.CompareTag("Elevator"))
         {
+            elevatorInRange = false;
             tooltip.SetActive(false);
         }
     }
@@ -207,8 +208,7 @@ public class Player : MonoBehaviour
     {
         if (fuel.activeSelf)
         {
-            audioManager.StopSFX();
-            audioManager.playSFX(audioManager.crafting);
+            audioManager.playSFXStoppable(audioManager.crafting);
             craftingSFXPlaying = true;
         }
     }
