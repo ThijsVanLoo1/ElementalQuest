@@ -9,6 +9,7 @@ public class Crafting : MonoBehaviour
     public Slot[] craftingSlots;
     private Sprite defaultCursorSprite;
     public Transform controllerCursor;
+    public GameObject binasCanvas;
 
     private int lastCompletedRecipe = -1;
 
@@ -96,6 +97,7 @@ public class Crafting : MonoBehaviour
     }
     void closeCraftingGrid()
     {
+        binasCanvas.SetActive(false);
         canvas.SetActive(false);
         Player.canWalk = true;
     }

@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject canvas;
     public GameObject crafting;
+    public GameObject binasCanvas;
     public GameObject signCanvas;
     public Animator animator;
     public Transform spotLightTransform;
@@ -42,37 +43,41 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Timer += Time.deltaTime;
-        if (!canWalk) return;
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if (canWalk)
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
+        }
 
         //Mining QTE Start
         if (!canvas.activeSelf && oreInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
         {
             startQuickTime();
         }
+        //Open Crafting Table
         if (!canvas.activeSelf && craftingTableInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
         {
             startCrafting();
         }
-        if (!canvas.activeSelf && craftingTableInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
+        //Toggle Binas from CT
+        if (crafting.activeSelf && Input.GetButtonDown("OpenInventory")) //Change for controller input
         {
-            startCrafting();
+            ToggleBinas();
         }
-        if (!canvas.activeSelf && elevatorInRange && (Input.GetButtonDown("MineOre") || Input.GetKey(KeyCode.Mouse0))) //Change for controller input
+        //Repair Elevator
+        if (!canvas.activeSelf && elevatorInRange && Input.GetButtonDown("MineOre")) //Change for controller input
         {
             repairElevator();
         }
+        //Go to next Level if Elevator is repaired
         if (craftingSFXPlaying && Timer2 > 3f)
         {
             SceneManager.LoadScene("Ending");
 
         }
-
-
 
         //Lighting
         if (movement != Vector2.zero)
@@ -81,6 +86,7 @@ public class Player : MonoBehaviour
             angle += 180f;
             spotLightTransform.rotation = Quaternion.Euler(0, 0, angle);
         }
+
     }
 
     private void FixedUpdate()
@@ -184,6 +190,11 @@ public class Player : MonoBehaviour
     {
         crafting.SetActive(true);
         canWalk = false;
+    }
+
+    void ToggleBinas()
+    {
+        binasCanvas.SetActive(!binasCanvas.activeSelf);
     }
 
     private void repairElevator()
