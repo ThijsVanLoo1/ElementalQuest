@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     private float Timer2 = 0f;
     private bool craftingSFXPlaying = false;
 
+
     //Finds Audio before first frame
     private void Awake()
     {
@@ -116,7 +117,6 @@ public class Player : MonoBehaviour
         if (movement.x == 0 && movement.y == 0)
         {
             Timer = 5f;
-            audioManager.StopSFX();
         }
 
     }

@@ -7,6 +7,7 @@ public class CutsceneManager : MonoBehaviour
     private int lineNumber;
 
     public string[] lines;
+    public AudioSource[] sources;
 
     public TextMeshProUGUI subtitle;
 
@@ -14,11 +15,13 @@ public class CutsceneManager : MonoBehaviour
     {
         lineNumber = 0;
         subtitle.text = lines[0].ToString();
+        sources[0].Play();
     }
 
     public void NextLine()
     {
         lineNumber++;
         subtitle.text = lines[lineNumber].ToString();
+        sources[lineNumber].Play();
     }
 }
