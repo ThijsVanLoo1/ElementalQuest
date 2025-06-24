@@ -6,6 +6,7 @@ public class InventoryOpacity : MonoBehaviour
 {
     public GameObject hiddenInventory;
     public GameObject VisibleInventory;
+    public GameObject craftingUI;
 
     public static GameObject ore;
     private string oreName;
@@ -78,7 +79,7 @@ public class InventoryOpacity : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("OpenInventory"))
+        if (Input.GetButtonDown("OpenInventory") && !craftingUI.activeSelf)
         {
             ToggleCanvas();
         }
