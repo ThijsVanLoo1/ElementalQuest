@@ -682,6 +682,7 @@ MonoBehaviour:
   moveSpeed: 450
   cooldownFill: {fileID: 6794632330943165519}
   playerAnimator: {fileID: 1795476164123822332}
+  oreName: 
   healthBar: {fileID: 3376298325305662909}
   currentHealth: {fileID: 1115634322127520457}
   maxHealth: {fileID: 7965138405457797377}
@@ -970,7 +971,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &4542177076419757797
 MonoBehaviour:
