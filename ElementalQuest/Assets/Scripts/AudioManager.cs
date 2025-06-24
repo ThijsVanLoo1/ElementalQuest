@@ -24,9 +24,23 @@ public class AudioManager : MonoBehaviour
         SFXSource.PlayOneShot(clip);
     }
 
+    public void playSFXStoppable(AudioClip clip)
+    {
+        SFXSource.clip = clip;
+        SFXSource.Play();
+    }
+
     public void StopSFX()
     {
         SFXSource.Stop();
+    }
+
+    public void StopSFXSpecific(AudioClip clip)
+    {
+        if (SFXSource.isPlaying && SFXSource.clip == clip)
+        {
+            SFXSource.Stop();
+        }
     }
 
     //shuffle array & play music

@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
         {
             if (Timer > 4.3f)
             {
-                audioManager.playSFX(audioManager.Walking);
+                audioManager.playSFXStoppable(audioManager.Walking);
                 Timer = 0;
             }
         }
@@ -117,6 +117,7 @@ public class Player : MonoBehaviour
         if (movement.x == 0 && movement.y == 0)
         {
             Timer = 5f;
+            audioManager.StopSFXSpecific(audioManager.Walking);
         }
 
     }

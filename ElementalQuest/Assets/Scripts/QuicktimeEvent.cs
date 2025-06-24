@@ -72,7 +72,7 @@ public class QuicktimeEvent : MonoBehaviour
         if (canInput && (Input.GetButtonDown("MineOre") || Input.GetKeyDown(KeyCode.Mouse0)))
         {
             CheckSuccess();
-            audioManager.playSFX(audioManager.MineSound);
+            audioManager.playSFXStoppable(audioManager.MineSound);
             StartCoroutine(InputCooldownCoroutine());
         }
         if(canInput && Input.GetButtonDown("Cancel"))
