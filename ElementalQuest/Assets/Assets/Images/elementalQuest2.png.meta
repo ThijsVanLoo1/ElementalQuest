@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 106210d3e39ea994ca49577ce6bfdf62
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3871441092935558370
+    second: elementalQuest2_0
+  - first:
+      213: 3712624986661742790
+    second: elementalQuest2_1
+  - first:
+      213: 2605373601765368628
+    second: elementalQuest2_2
+  - first:
+      213: -5407986952851070101
+    second: elementalQuest2_3
+  - first:
+      213: -9178348019119551781
+    second: elementalQuest2_4
+  - first:
+      213: 7351901429286889158
+    second: elementalQuest2_5
+  - first:
+      213: 5538982781131906137
+    second: elementalQuest2_6
+  - first:
+      213: 3261949063347272531
+    second: elementalQuest2_7
+  - first:
+      213: -5605605430591340811
+    second: elementalQuest2_8
+  - first:
+      213: 4007865952015004493
+    second: elementalQuest2_9
+  - first:
+      213: -6626514218573702901
+    second: elementalQuest2_10
+  - first:
+      213: -7758910118148910180
+    second: elementalQuest2_11
+  - first:
+      213: -3709292483387027789
+    second: elementalQuest2_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elementalQuest2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 74
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bd9b676d0e54ac0800000000000000
+      internalID: -3871441092935558370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 5
+        width: 34
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c8663a41c4e58330800000000000000
+      internalID: 3712624986661742790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 8
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433a768ac75282420800000000000000
+      internalID: 2605373601765368628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 6
+        width: 110
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b636d55e488f2f4b0800000000000000
+      internalID: -5407986952851070101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_4
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 8
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda08770b15ff9080800000000000000
+      internalID: -9178348019119551781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_5
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 8
+        width: 42
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c6e45cd563370660800000000000000
+      internalID: 7351901429286889158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_6
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 7
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c5f5e1e7b6edc40800000000000000
+      internalID: 5538982781131906137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_7
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 5
+        width: 34
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b7b3cf365c44d20800000000000000
+      internalID: 3261949063347272531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_8
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 0
+        width: 84
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe3a968f83e432b0800000000000000
+      internalID: -5605605430591340811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_9
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 5
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d43bc3949dcce9730800000000000000
+      internalID: 4007865952015004493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_10
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 8
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b09d6de4d64e904a0800000000000000
+      internalID: -6626514218573702901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_11
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 8
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93dc832b50d25490800000000000000
+      internalID: -7758910118148910180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementalQuest2_12
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 8
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be80b79322f58cc0800000000000000
+      internalID: -3709292483387027789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      elementalQuest2_0: -3871441092935558370
+      elementalQuest2_1: 3712624986661742790
+      elementalQuest2_10: -6626514218573702901
+      elementalQuest2_11: -7758910118148910180
+      elementalQuest2_12: -3709292483387027789
+      elementalQuest2_2: 2605373601765368628
+      elementalQuest2_3: -5407986952851070101
+      elementalQuest2_4: -9178348019119551781
+      elementalQuest2_5: 7351901429286889158
+      elementalQuest2_6: 5538982781131906137
+      elementalQuest2_7: 3261949063347272531
+      elementalQuest2_8: -5605605430591340811
+      elementalQuest2_9: 4007865952015004493
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
