@@ -24,11 +24,24 @@ public class Crafting : MonoBehaviour
     public GameObject ethanol;
     public GameObject hydrochloricAcid;
     public GameObject salt;
+    public GameObject ammonia;
+    public GameObject nitricAcid;
+    public GameObject ammoniumNitrate;
+    public GameObject explosive;
+    AudioManager audioManager;
+
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
+
     private void Start()
     {
         defaultCursorSprite = customCursor.sprite;
-        //WHEN ORE IS MINED -> SET ITEM OBJECT TRUE (OR FROM INVENTORY)
     }
+
     private void Update()
     {
         if ((Input.GetButtonDown("Cancel")))
@@ -68,7 +81,7 @@ public class Crafting : MonoBehaviour
 
     void AddCompletedElement(int i)
     {
-        // ADD TO INVENTORY IN EVERY LOOP
+   
         if (i == 0)
         {
             water.gameObject.SetActive(true);
@@ -91,6 +104,26 @@ public class Crafting : MonoBehaviour
         else if (i == 4)
         {
             salt.gameObject.SetActive(true);
+            lastCompletedRecipe = -1;
+        }
+        else if (i == 5)
+        {
+            ammonia.gameObject.SetActive(true);
+            lastCompletedRecipe = -1;
+        }
+        else if (i == 6)
+        {
+            nitricAcid.gameObject.SetActive(true);
+            lastCompletedRecipe = -1;
+        }
+        else if (i == 7)
+        {
+            ammoniumNitrate.gameObject.SetActive(true);
+            lastCompletedRecipe = -1;
+        }
+        else if (i == 8)
+        {
+            explosive.gameObject.SetActive(true);
             lastCompletedRecipe = -1;
         }
 
@@ -148,6 +181,8 @@ public class Crafting : MonoBehaviour
                     resultSlot.item = null;
                     resultSlot.gameObject.SetActive(false);
                     itemList[i] = null;
+                    audioManager.playSFXStoppable(audioManager.brewing);
+          
                     AddCompletedElement(lastCompletedRecipe);
 
                 }

@@ -332,38 +332,62 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 697524013251378153, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 746156396987802757, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 824691193140716647, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: salt
+      propertyPath: ammonia
       value: 
-      objectReference: {fileID: 267768954684940217}
+      objectReference: {fileID: 5495719907414577978}
+    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+      propertyPath: explosive
+      value: 
+      objectReference: {fileID: 5495719907262164779}
+    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+      propertyPath: nitricAcid
+      value: 
+      objectReference: {fileID: 5495719905971328141}
+    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+      propertyPath: ammoniumNitrate
+      value: 
+      objectReference: {fileID: 5495719907006519174}
     - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
       propertyPath: recipes.Array.size
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: 'recipes.Array.data[4]'
-      value: chlorine+sodium
+      propertyPath: 'recipes.Array.data[5]'
+      value: hydrogen+hydrogen+hydrogen+nitrogen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+      propertyPath: 'recipes.Array.data[6]'
+      value: hydrogen+nitrogen+oxygen+oxygen+oxygen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+      propertyPath: 'recipes.Array.data[7]'
+      value: ammonia+nitricAcid
+      objectReference: {fileID: 0}
+    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+      propertyPath: 'recipes.Array.data[8]'
+      value: ammoniumNitrate+ethanol
       objectReference: {fileID: 0}
     - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
       propertyPath: recipeResults.Array.size
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: 'recipeResults.Array.data[4]'
+      propertyPath: 'recipeResults.Array.data[5]'
       value: 
-      objectReference: {fileID: 1505389587659858759}
+      objectReference: {fileID: 4796485603868568499}
+    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+      propertyPath: 'recipeResults.Array.data[6]'
+      value: 
+      objectReference: {fileID: 4796485602089872388}
+    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+      propertyPath: 'recipeResults.Array.data[7]'
+      value: 
+      objectReference: {fileID: 4796485603192205071}
+    - target: {fileID: 2476557447428660483, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+      propertyPath: 'recipeResults.Array.data[8]'
+      value: 
+      objectReference: {fileID: 4796485603514783650}
     - target: {fileID: 3624712902294177126, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -444,71 +468,87 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4392218495913789546, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5038682165602918794, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5330141029056442999, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5522121793031620843, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5522121793031620843, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 5546671543968653177, guid: cb626464f9b900446b8bc6778e9b1708, type: 3}
-    - target: {fileID: 5522121793031620843, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5533039243085821083, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
       propertyPath: m_Name
       value: Crafting
       objectReference: {fileID: 0}
-    - target: {fileID: 6862798789116393550, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 8995154407686431259, guid: e312f0827d6868c41aaee21eb27d1c3c, type: 3}
-    - target: {fileID: 6862798789116393550, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
+    - target: {fileID: 5841471052883529919, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+      propertyPath: itemName
+      value: ethanol
       objectReference: {fileID: 0}
-    - target: {fileID: 7429123242393976567, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704306023915521758, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
+    - target: {fileID: 5841471052883529919, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+      propertyPath: description
+      value: fuel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
---- !u!1 &267768954684940217 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2735279027589501419, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
-  m_PrefabInstance: {fileID: 129726228154514019}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1505389587659858759 stripped
+--- !u!114 &4796485602089872388 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3107936559671617890, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5195762489796815243, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
   m_PrefabInstance: {fileID: 129726228154514019}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267768954684940217}
+  m_GameObject: {fileID: 5495719905971328141}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf4d9dd36c692b140bb90f4a47690494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4796485603192205071 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1619405606446840764, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+  m_PrefabInstance: {fileID: 129726228154514019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495719907006519174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4d9dd36c692b140bb90f4a47690494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4796485603514783650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 308864765230433586, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+  m_PrefabInstance: {fileID: 129726228154514019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495719907262164779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4d9dd36c692b140bb90f4a47690494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4796485603868568499 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9216646396340159287, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+  m_PrefabInstance: {fileID: 129726228154514019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495719907414577978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4d9dd36c692b140bb90f4a47690494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5495719905971328141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5134942038704229435, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+  m_PrefabInstance: {fileID: 129726228154514019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5495719907006519174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5173573313541444179, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+  m_PrefabInstance: {fileID: 129726228154514019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5495719907262164779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4911374891043030942, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+  m_PrefabInstance: {fileID: 129726228154514019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5495719907414577978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1815116971798029624, guid: 1e0ae9469b6a55845b1d1a94e31e5875, type: 3}
+  m_PrefabInstance: {fileID: 129726228154514019}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
