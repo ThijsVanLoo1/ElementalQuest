@@ -43,6 +43,11 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Timer += Time.deltaTime;
+        if(craftingSFXPlaying)
+        {
+            Timer2 += Time.deltaTime;
+        }
+
         if (canWalk)
         {
             movement.x = Input.GetAxisRaw("Horizontal");
