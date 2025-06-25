@@ -55,7 +55,7 @@ public class JoystickMouse : MonoBehaviour
 
                 if (item != null && !string.IsNullOrEmpty(item.description))
                 {
-                    Vector2 offset = new Vector2(80, 40);
+                    Vector2 offset = new Vector2(10, 40);
                     itemDescription.Show(item.description, (Vector2)controllerCursor.position + offset);
                    
 
