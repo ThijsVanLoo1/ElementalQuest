@@ -169,7 +169,8 @@ public class InventoryOpacity : MonoBehaviour
                 return Image_Cu;
             case "Silver":
                 return Image_Ag;
-            case "Zink":
+            case "Zinc":
+                items.Find("zinc").gameObject.SetActive(true);
                 return Image_Zn;
             case "Cadium":
                 return Image_Cd;
@@ -223,7 +224,8 @@ public class InventoryOpacity : MonoBehaviour
                 return Image_Sb;
             case "Telluur":
                 return Image_Te;
-            case "Jood":
+            case "Iodine":
+                items.Find("iodine").gameObject.SetActive(true);
                 return Image_I;
             case "Xenon":
                 return Image_Xe;

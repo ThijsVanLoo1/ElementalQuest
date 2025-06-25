@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     public Transform spotLightTransform;
     public GameObject fuel;
+    public GameObject fadeIn;
 
     Vector2 movement;
     private bool oreInRange = false;
@@ -78,10 +79,14 @@ public class Player : MonoBehaviour
         {
             repairElevator();
         }
+        if(craftingSFXPlaying && Timer2 > 2f && !fadeIn.activeSelf)
+        {
+            fadeIn.SetActive(true);
+        }
         //Go to next Level if Elevator is repaired
         if (craftingSFXPlaying && Timer2 > 3f)
         {
-            SceneManager.LoadScene("Ending");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
 

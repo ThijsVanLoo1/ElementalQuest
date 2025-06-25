@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eda18493c1122094385d0072d42c8e6d
+guid: 0a7ea18c5d3f0d34aa421375ca2438a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2005674868671660012
-    second: Icon32_0
+      213: 4896658886411782475
+    second: moustache_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icon32_0
+      name: moustache_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 9
-        width: 28
-        height: 15
+        x: 172
+        y: 163
+        width: 236
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cef3a12aaa695db10800000000000000
-      internalID: 2005674868671660012
+      spriteID: b4985d6405d64f340800000000000000
+      internalID: 4896658886411782475
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Icon32_0: 2005674868671660012
+      moustache_0: 4896658886411782475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

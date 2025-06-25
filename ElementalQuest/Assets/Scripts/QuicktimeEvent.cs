@@ -16,6 +16,7 @@ public class QuicktimeEvent : MonoBehaviour
     private float inputCooldown = 0.7f;
     public RectTransform cooldownFill;
     public Animator playerAnimator;
+    public Animator thefrenchAnimator;
 
     private RectTransform pointerTransform;
     private Vector3 targetPosition;
@@ -79,7 +80,7 @@ public class QuicktimeEvent : MonoBehaviour
             audioManager.playSFXStoppable(audioManager.MineSound);
             StartCoroutine(InputCooldownCoroutine());
         }
-        if(canInput && Input.GetButtonDown("Cancel"))
+        if(canInput && Input.GetButtonDown("Cancel") && oreName != "TheFrench")
         {
             gameObject.transform.parent.gameObject.SetActive(false);
             Player.canWalk = true;
@@ -119,6 +120,13 @@ public class QuicktimeEvent : MonoBehaviour
         {
             inventory.AddToInventory(oreName);
         }
+
+        if(oreName == "TheFrench")
+        {
+            thefrenchAnimator.SetTrigger("Death");
+            playerAnimator.SetTrigger("Victory");
+        }
+
         Destroy(ore);
         gameObject.transform.parent.gameObject.SetActive(false);
 

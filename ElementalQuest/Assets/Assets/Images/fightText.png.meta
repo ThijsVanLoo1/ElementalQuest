@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eda18493c1122094385d0072d42c8e6d
+guid: 237575f4ed7c67b499259b912b5d3c11
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2005674868671660012
-    second: Icon32_0
+      213: -4709508812973842175
+    second: fightText_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icon32_0
+      name: fightText_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 9
-        width: 28
-        height: 15
+        x: 0
+        y: 8
+        width: 1400
+        height: 688
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cef3a12aaa695db10800000000000000
-      internalID: 2005674868671660012
+      spriteID: 1016f18cfa674aeb0800000000000000
+      internalID: -4709508812973842175
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Icon32_0: 2005674868671660012
+      fightText_0: -4709508812973842175
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
