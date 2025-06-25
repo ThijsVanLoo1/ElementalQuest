@@ -23,10 +23,12 @@ public class QuicktimeEvent : MonoBehaviour
     public static GameObject ore;
     private float oreMass;
     public string oreName;
+    private Sprite oreSprite;
 
     public Slider healthBar;
     public TextMeshProUGUI currentHealth;
     public TextMeshProUGUI maxHealth;
+    public Image oreImage;
 
     AudioManager audioManager;
 
@@ -46,11 +48,13 @@ public class QuicktimeEvent : MonoBehaviour
     {
         oreMass = ore.GetComponent<Ore>().oreMass;
         oreName = ore.GetComponent<Ore>().oreName;
+        oreSprite = ore.GetComponent<SpriteRenderer>().sprite;
         healthBar.maxValue = oreMass;
         healthBar.value = oreMass;
 
         currentHealth.text = oreMass.ToString();
         maxHealth.text = oreMass.ToString();
+        oreImage.sprite = oreSprite;
     }
 
     void Update()
