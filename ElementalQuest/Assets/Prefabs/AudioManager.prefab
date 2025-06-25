@@ -186,8 +186,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e888f150f8f9a984c8d57d69643276af, type: 3}
   - {fileID: 8300000, guid: ce1e32f276a9e384ba6013ce7889065f, type: 3}
   MineSound: {fileID: 8300000, guid: 3d7277e874c825047ba89c34451afba6, type: 3}
-  RandomCaveSound: {fileID: 0}
-  Walking: {fileID: 0}
+  RandomCaveSound: {fileID: 8300000, guid: db70823a44e103c41ae29210d5a97ad5, type: 3}
+  Walking: {fileID: 8300000, guid: b46a24746179fea4292687df8a3d1586, type: 3}
+  crafting: {fileID: 8300000, guid: 95d43821788ac764aad99d77231dfd1b, type: 3}
+  brewing: {fileID: 8300000, guid: 17464b27ddded98439729b0d870ef2a6, type: 3}
 --- !u!1 &6580877715828190907
 GameObject:
   m_ObjectHideFlags: 0
