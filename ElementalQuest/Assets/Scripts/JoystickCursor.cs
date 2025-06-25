@@ -57,6 +57,8 @@ public class JoystickMouse : MonoBehaviour
                 {
                     Vector2 offset = new Vector2(80, 40);
                     itemDescription.Show(item.description, (Vector2)controllerCursor.position + offset);
+                   
+
                     showDescription = true;
                 }
                 break;
